@@ -1,0 +1,27 @@
+<head>
+    <script>
+        function validation(){
+            var name = document.form1.user.value;
+            var pass = document.form1.pass.value;
+            if (name == "" || pass == ""){
+                alert("Username/Password cannot be NULL");
+            }
+            else if(pass.length <=5){
+                alert("Password length cannot be less than 6");
+            }
+            else{
+                alert("login success");
+            }
+        }
+    </script>
+</head>
+<body>
+        <form onsubmit="return(validation())" name="form1">
+        <label>Username:</label>
+        <input type="text" name="user"><br>
+        <label>Password:</label>
+        <input type="password" name="pass"><br>
+        <input type="submit">
+
+        </form>
+</body>
